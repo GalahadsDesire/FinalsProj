@@ -20,8 +20,8 @@
     @foreach ($data as $appt)
         <tr>
             <td>{{ $appt->appt_id }}</td> <!-- --- DELETE/ comment IF NOT WORKING --- -->
-            <td>{{ $appt->Customer_FN}}</td>
-            <td>{{ $appt->Customer_LN}}</td>
+            <td>{{ $appt->Patient_FN}}</td>
+            <td>{{ $appt->Patient_LN}}</td>
             <td>{{ $appt->phone_number }}</td>
             <td>{{ $appt->email }}</td>
             <td>{{ $appt->HomeAddress }}</td>
@@ -35,7 +35,7 @@
     @endforeach 
 </table>
 <br>
-
+<a href="{{ route('pages.create') }}">Add New Appointment</a>
 
 </body>
 

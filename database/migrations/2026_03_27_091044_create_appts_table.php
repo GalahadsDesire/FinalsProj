@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('appts', function (Blueprint $table) {
             $table->id('appt_id') -> primary() -> autoIncrement();
-            $table->string('Customer_LN') -> required() -> max(70);
-            $table->string('Customer_FN') -> required() -> max(100);
+            $table->string('Patient_LN') -> required() -> max(70);
+            $table->string('Patient_FN') -> required() -> max(100);
             $table->string('phone_number') -> required() -> max(20);
             $table->string('email') -> max(100);
             $table->text('HomeAddress') -> required();
             $table->string('Doctor_Assigned') -> required() -> max(100);
             $table->date('Date') -> required();
             $table->time('Time_slot') -> required();
-            $table->enum('Status', ['Ongoing', 'Finished', 'Cancelled','Waiting','Available'])->default('Available');
+            $table->enum('Status', ['Ongoing', 'Finished', 'Cancelled','Waiting','Available'])-> required();
            
         });
     }
