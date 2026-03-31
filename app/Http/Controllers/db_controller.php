@@ -8,4 +8,11 @@ function index(){
 $data = DB::table('appts')->get();
 return view('index', ['data'=>$data]);
 }
+
+
+ function destroy($id) {
+        $book = Book::findOrFail($id);
+        $book->delete();
+        return redirect()->route('index');
+    }
 }

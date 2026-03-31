@@ -27,7 +27,7 @@ return new class extends Migration
     }
 /* ['appt_id','Customer_FN','Customer_LN',
 'phone_number','email','HomeAddress',
-'Doctor_Assigned','Date','Time_slot','Status'] */
+'Doctor_Assigned','Date','Time_slot','Status'] <-- incase u get lost lol */
     /**
      * Reverse the migrations.
      */
